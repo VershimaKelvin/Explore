@@ -3,9 +3,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
+import 'package:untitled4/core/di/di_container.dart';
 import 'package:untitled4/core/widgets/appbar.dart';
 import 'package:untitled4/core/widgets/language_list.dart';
 import 'package:http/http.dart' as http;
+import 'package:untitled4/domain/entity.dart';
 import 'package:untitled4/model/country_model.dart';
 import 'package:untitled4/provider/country_notifier.dart';
 
@@ -17,11 +19,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  
   final myController = TextEditingController();
 
 
   void _loadCountryData() {
-    final on = Provider.of<CountryNotifier>(context, listen: false);
+    di<CountryNotifier>().fetchCountries(context);
   }
 
   @override
@@ -95,11 +98,8 @@ class _HomeScreenState extends State<HomeScreen> {
               builder: (BuildContext context, notifier,child) {
                 return ListView.builder(
                   itemBuilder: (BuildContext context,int index ){
-                    return const ListTile(
-                      leading: Image(
-                        image: NetworkImage(''),
-                      ),
-                      title: Text(''),
+                    return Listtile(
+                      country: on.countries![index],
                     );
                   },
                 );
@@ -107,6 +107,27 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class Listtile extends StatelessWidget {
+  const Listtile({
+    Key? key, 
+    required this.country,
+  }) : super(key: key);
+
+  final CountryEntity country;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const Image(
+        image: NetworkImage(''),
+      ),
+      title: Text(
+          country.name.common
       ),
     );
   }
