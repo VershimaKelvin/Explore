@@ -1,14 +1,9 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled4/core/di/di_container.dart';
 import 'package:untitled4/core/widgets/appbar.dart';
 import 'package:untitled4/core/widgets/language_list.dart';
-import 'package:http/http.dart' as http;
 import 'package:untitled4/domain/entity.dart';
-import 'package:untitled4/model/country_model.dart';
 import 'package:untitled4/provider/country_notifier.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   initState(){
     Future.delayed(Duration.zero, _loadCountryData);
+    super.initState();
   }
 
   @override
@@ -98,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
               builder: (BuildContext context, notifier,child) {
                 return ListView.builder(
                   itemBuilder: (BuildContext context,int index ){
-                    return Listtile(
+                    return ListTileWidget(
                       country: on.countries![index],
                     );
                   },
@@ -112,8 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class Listtile extends StatelessWidget {
-  const Listtile({
+class ListTileWidget extends StatelessWidget {
+  const ListTileWidget({
     Key? key, 
     required this.country,
   }) : super(key: key);
