@@ -15,7 +15,7 @@
 ## Project Overview
 
 
-This is a country informative app built with flutter, it consumes an API from which data is gotten from, a list of country data with some information like population, capital, language, currency and other is displayed in the Country detail screen. The app supports both light and dark theme
+This is a country informative app built with flutter, it consumes an API from which data is gotten from, a list of country data with some information like population, capital, language, currency and other is displayed in the Country detail screen. The app supports both light and dark theme, with multiple languages
 
 
 ## Getting Started 🚀
@@ -30,9 +30,7 @@ To run development either use the launch configuration in VSCode/Android Studio 
 # Development
 $ flutter run --flavor development --target lib/main_development.dart
 
-
-
-_\*Charleston works on iOS, Android, Web, and Windows._
+```
 
 ---
 
