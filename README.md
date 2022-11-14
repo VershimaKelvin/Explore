@@ -129,3 +129,4 @@ I faced a lot of challenges considering that i am not too good with some of thes
 it would be nice if the app has like a couple of short videos on each country that shows a little bit on what the people of the country look like and their culture
 
 ## Appetize Link 📱
+https://appetize.io/app/zgio2uzodp77hggn56f5gcctqi?device=pixel4&osVersion=11.0&scale=75
