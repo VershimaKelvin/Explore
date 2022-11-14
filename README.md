@@ -32,6 +32,8 @@ $ flutter run --target lib/main.dart
 
 ```
 
+_\*Countries works on iOS, Android, and Web._
+
 ---
 
 
