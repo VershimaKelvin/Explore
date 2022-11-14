@@ -122,10 +122,10 @@ For this project i used a couple of libraries to achieve an easily extensible co
 ```
 These some of the packages i used to achieve a clean code and structure
 
-## Challenges faced
+## Challenges faced 😖
 I faced a lot of challenges considering that i am not too good with some of these packages, i was getting an error using getIt that my classes arent registered when i had already registered, i spent a full day on this error, i wanted to give up but i persisted until i realized i had to run build runner build after manualling deleting the perviously generted .config file. Also, after i had created my model, i was getting an error like 'List<dynamic> is not a subtype of Map<Sting,dynamic>' it sounds like an easy error but i spent almost a whole day on it as well until i realised some of the field were not present in all maps so i had to make some nullable. so basically thats some of the challenges i faced.
 
-## Features i would like to add
+## Features i would like to add 💡
 it would be nice if the app has like a couple of short videos on each country that shows a little bit on what the people of the country look like and their culture
 
-## Appetize Link
+## Appetize Link 📱
