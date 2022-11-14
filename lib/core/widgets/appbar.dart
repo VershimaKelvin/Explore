@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/core/Theme/theme_config.dart';
+import 'package:provider/provider.dart';
+import 'package:untitled4/core/Theme/myTheme.dart';
+
 
 class AppbarWidget extends StatefulWidget implements PreferredSizeWidget {
   const AppbarWidget({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class AppbarWidget extends StatefulWidget implements PreferredSizeWidget {
   State<AppbarWidget> createState() => _AppbarWidgetState();
 
   @override
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize =>const Size.fromHeight(80);
 }
 
 class _AppbarWidgetState extends State<AppbarWidget> {
@@ -18,48 +20,49 @@ class _AppbarWidgetState extends State<AppbarWidget> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        title: Transform( 
-          transform: Matrix4.translationValues(-20.0, 0.0, 0.0),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RichText(
-          text: const TextSpan(
-            text: 'Explore ',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 18,
-              fontFamily: '',
-              fontWeight: FontWeight.w400,
-            ),
-            children: [
-              TextSpan(
-                text: '.',
-                style: TextStyle(
-                  color: Colors.red,
-                  decoration: TextDecoration.underline,
-                  fontSize: 23,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ],
+      elevation: 0,
+      backgroundColor: Colors.white,
+        title: RichText(
+        text: const TextSpan(
+          text: 'Explore ',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+            fontFamily: 'Pacifico',
           ),
-      ),
-              ],
-          ),
+          children: [
+            TextSpan(
+        text: '.',
+        style: TextStyle(
+          color: Colors.red,
+          fontSize: 23,
+          fontWeight: FontWeight.w400,
         ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: GestureDetector(
-            onTap: (){
-              !isLight;
-              currentTheme.switchTheme();
-            },
-            child: Icon(
-              isLight? Icons.light_mode_outlined : Icons.dark_mode_outlined,
             ),
-          ),
+          ],
+        ),
+      ),
+      actions: [
+        Consumer<MyTheme>(
+          builder: (BuildContext context, value, Widget? child) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: IconButton(
+                icon: Icon(
+                  isLight? Icons.light_mode_outlined : Icons.dark_mode_outlined,
+                  color: Colors.black,
+                  size: 25,
+                ),
+                onPressed: () {
+                  setState(() {
+                    isLight=!isLight;
+                  });
+                  value.switchTheme();
+                },
+
+              ),
+            );
+          },
         ),
       ],
     );

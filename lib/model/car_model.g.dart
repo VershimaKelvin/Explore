@@ -7,7 +7,7 @@ part of 'car_model.dart';
 // **************************************************************************
 
 CarModel _$CarModelFromJson(Map<String, dynamic> json) => CarModel(
-      (json['signs'] as List<dynamic>).map((e) => e as String).toList(),
+      (json['signs'] as List<dynamic>?)?.map((e) => e as String).toList(),
       json['side'] as String,
     );
 

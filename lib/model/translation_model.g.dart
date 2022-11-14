@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'languages_model.dart';
+part of 'translation_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-LanguagesModel _$LanguagesModelFromJson(Map<String, dynamic> json) =>
-    LanguagesModel(
-      json['ara'] as String,
+TranslationModel _$TranslationModelFromJson(Map<String, dynamic> json) =>
+    TranslationModel(
+      AraModel.fromJson(json['ara'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$LanguagesModelToJson(LanguagesModel instance) =>
+Map<String, dynamic> _$TranslationModelToJson(TranslationModel instance) =>
     <String, dynamic>{
       'ara': instance.ara,
     };

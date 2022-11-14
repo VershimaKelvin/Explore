@@ -13,7 +13,7 @@ class CarModel {
   factory CarModel.fromJson(Map<String, dynamic> json) =>
       _$CarModelFromJson(json);
 
-  final List<String> signs;
+  final List<String>? signs;
   final String side;
 
   Map<String, dynamic> toJson() => _$CarModelToJson(this);

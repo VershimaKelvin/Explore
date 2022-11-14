@@ -9,15 +9,12 @@ class ApiRequester {
   });
   final Dio dio;
 
-
-  Future<Response> getRequest({
-    bool cacheRequest = false,
-  }) async {
+  Future<Response> getRequest() async {
     final response = dio.get(
       BASE_URL,
-      options: Options(),
     );
     return response;
+
   }
 
 }

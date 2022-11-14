@@ -8,8 +8,8 @@ part of 'coat_of_arm_model.dart';
 
 CoatOfArmModel _$CoatOfArmModelFromJson(Map<String, dynamic> json) =>
     CoatOfArmModel(
-      json['png'] as String,
-      json['svg'] as String,
+      json['png'] as String?,
+      json['svg'] as String?,
     );
 
 Map<String, dynamic> _$CoatOfArmModelToJson(CoatOfArmModel instance) =>

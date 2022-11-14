@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 
+@lazySingleton
 class MyTheme with ChangeNotifier{
   static bool isDark = false;
 

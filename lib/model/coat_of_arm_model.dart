@@ -13,8 +13,8 @@ class CoatOfArmModel {
   factory CoatOfArmModel.fromJson(Map<String, dynamic> json) =>
       _$CoatOfArmModelFromJson(json);
 
-  final String png;
-  final String svg;
+  final String? png;
+  final String? svg;
 
   Map<String, dynamic> toJson() => _$CoatOfArmModelToJson(this);
 }

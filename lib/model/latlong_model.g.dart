@@ -1,17 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'languages_model.dart';
+part of 'latlong_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-LanguagesModel _$LanguagesModelFromJson(Map<String, dynamic> json) =>
-    LanguagesModel(
-      json['ara'] as String,
+LatLongModel _$LatLongModelFromJson(Map<String, dynamic> json) => LatLongModel(
+      json['latlong'] as List<dynamic>,
     );
 
-Map<String, dynamic> _$LanguagesModelToJson(LanguagesModel instance) =>
+Map<String, dynamic> _$LatLongModelToJson(LatLongModel instance) =>
     <String, dynamic>{
-      'ara': instance.ara,
+      'latlong': instance.latlong,
     };
