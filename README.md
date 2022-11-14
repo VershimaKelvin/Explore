@@ -20,7 +20,7 @@ This is a country informative app built with flutter, it consumes an API from wh
 
 ## Getting Started 🚀
 
-This project contains only 1 flavors:
+This project contains only 1 flavor:
 
 - development
 
@@ -28,7 +28,7 @@ To run development either use the launch configuration in VSCode/Android Studio 
 
 ```sh
 # Development
-$ flutter run --flavor development --target lib/main_development.dart
+$ flutter run --target lib/main.dart
 
 ```
 
