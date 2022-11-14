@@ -40,8 +40,36 @@ _\*CountriesApp works on iOS, Android, and Web._
 The projects code base is structured in resemblance to clean architecture but not as detailed. With the initiative to make the app easily extensible, everything basically everything was abstracted and Single responsibility factor was put into mind to achieve this.
 The project has 6 folders under the lib directory /lib, which are core,domain,model,provider,screens and services with each folder containing a file having a particular responsibility.
 I have a datasource file in the service folder where i made my network call, i have a network folder in the core folder which has an api_requester file where i instantiated my dio package and configured it with the base_url, the network folder also have a network file where i checked for internet connectivity using the InternetConnectionChecker package.
-Also, it has an error folder still in the core folder where i managed every possible errors, the error folder in turn has an error file and a failure file. In both of these files i handeled errors and failures such as NoInternetFailure,TimoutFailure,NoDataFailure and others.
-i also have a constants folder where i created the base_url. The provider folder contains my provider class, the screens folder contains the app screens and a widget folder of some widgets i abstracted and the.
+Also, it has an error folder still in the core folder where i managed every possible errors, the error folder in turn has an error file and a failure file. In both of these files i handeled errors and failures such as NoInternetFailure, TimoutFailure, NoDataFailure and others.
+i also have a constants folder where i created the base_url. The provider folder contains my provider class, the screens folder contains the app screens and a widget folder of some widgets i abstracted.
 
-## Pull request and Contribution
-Anyone interested in this project can go ahead and fork it, all pull request will be attended to within 24 hours
+## Libraries Used
+For this project i used a couple of libraries to achieve an easily extensible codebase and clean code writing. Here are some packages i used.
+
+```sh
+# Dio
+  I usde Dio for network request
+  
+# internet_connection_checker
+  A pure Dart library that checks for internet by opening a socket to a list of specified addresses, each with individual port and timeout
+
+# json_annotation
+  Classes and helper functions that support JSON code generation via the `json_serializable` package.
+  
+# equatable
+  A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode.
+
+# provider
+  A wrapper around InheritedWidget to make them easier to use and more reusable.
+  
+# json_serializable
+  Automatically generate code for converting to and from JSON by annotating Dart classes.
+  
+# injectable
+  Injectable is a convenient code generator for get_it.
+  
+# get_it: ^7.2.0
+  Simple direct Service Locator that allows to decouple the interface from a concrete implementation and to access the concrete implementation from everywhere in your App
+
+```
+These some of the packages i used to achieve a clean code and structure
