@@ -91,7 +91,7 @@ lib
  
 ```
 
-## Libraries Used
+## Libraries Used 🛠️
 For this project i used a couple of libraries to achieve an easily extensible codebase and clean code writing. Here are some packages i used.
 
 ```sh
