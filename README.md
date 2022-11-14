@@ -1,8 +1,10 @@
-<p align="center">
-   <img src="assets/splash.png", width="200">
-</p>
-<h3 align="center">CountriesApp</>
-<br/><br/>  
+
+# CountriesApp
+
+![coverage][coverage_badge]
+[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
+
+
 <div align="center">
 
 
