@@ -32,8 +32,6 @@ $ flutter run --target lib/main.dart
 
 ```
 
-_\*CountriesApp works on iOS, Android, and Web._
-
 ---
 ## CodeBase
 
@@ -42,6 +40,67 @@ The project has 6 folders under the lib directory /lib, which are core,domain,mo
 I have a datasource file in the service folder where i made my network call, i have a network folder in the core folder which has an api_requester file where i instantiated my dio package and configured it with the base_url, the network folder also have a network file where i checked for internet connectivity using the InternetConnectionChecker package.
 Also, it has an error folder still in the core folder where i managed every possible errors, the error folder in turn has an error file and a failure file. In both of these files i handeled errors and failures such as NoInternetFailure, TimoutFailure, NoDataFailure and others.
 i also have a constants folder where i created the base_url. The provider folder contains my provider class, the screens folder contains the app screens and a widget folder of some widgets i abstracted.
+
+```
+lib
+├── core
+│   ├-----constants
+│   │      ├── network_client.dart
+│   │
+|   |-----di
+│   |     ├── di_container.dart
+│   │     └── di.container.config.dart
+│   │     └── register_module.dart
+│   │
+│   │-----errors
+│   |     ├── error.dart
+│   │     └── failure.dart
+│   │
+│   │-----network
+│   |     ├── api_requester.dart
+│   │     └── network_info.dart
+│   │
+│   │-----Theme
+│   |     ├── myTheme.dart
+│   │     └── response.dart
+│   │     └── theme_config.
+│   │
+│   │-----usecase
+│   |     └──  usecase.dart
+│   │     
+│   │-----widgets
+│   |     └──  appbar.dart
+│   │ 
+│   │ 
+├── domain  
+│   │-----repository
+│   |     ├── country_repository.dart
+│   │     └── country_repository.dart
+│   │ 
+│   │-----usecase
+│   |     └──  fetch_countires_usecase.dart
+│   │
+│   │-----entity.dart
+│   │ 
+│   │
+├── model 
+│   │-----(all models can be found here)
+│   │
+│   │
+├── provider
+│   │-----country_notifier.dart
+│   │
+│   │
+├── screens
+│   │-----details_screen.dart
+│   │-----home.dart
+│   │
+│   │
+├── services
+│   │-----data_source.dart
+
+ 
+```
 
 ## Libraries Used
 For this project i used a couple of libraries to achieve an easily extensible codebase and clean code writing. Here are some packages i used.
