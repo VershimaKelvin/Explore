@@ -32,28 +32,16 @@ $ flutter run --target lib/main.dart
 
 ```
 
-_\*Countries works on iOS, Android, and Web._
+_\*CountriesApp works on iOS, Android, and Web._
 
 ---
+## CodeBase
 
-
-## Installation and Usage
-To run the source code in your IDE, clone the repo
-
-*--  git clone https://github.com/VershimaKelvin/Projerctwork*
-
-after cloning, get all the dependencies by running
-
-*-- flutter pub get*
-
-![Pub Version](https://img.shields.io/pub/v/firebase)
-
-
-
-after getting all dependency, if no dependency issue arises, the app is ready to be run on your emulator or physical device. After the project has been deployed to device, create an account and follow all instructions that appears accordingly.
-
-
-
+The projects code base is structured in resemblance to clean architecture but not as detailed. With the initiative to make the app easily extensible, everything basically everything was abstracted and Single responsibility factor was put into mind to achieve this.
+The project has 6 folders under the lib directory /lib, which are core,domain,model,provider,screens and services with each folder containing a file having a particular responsibility.
+I have a datasource file in the service folder where i made my network call, i have a network folder in the core folder which has an api_requester file where i instantiated my dio package and configured it with the base_url, the network folder also have a network file where i checked for internet connectivity using the InternetConnectionChecker package.
+Also, it has an error folder still in the core folder where i managed every possible errors, the error folder in turn has an error file and a failure file. In both of these files i handeled errors and failures such as NoInternetFailure,TimoutFailure,NoDataFailure and others.
+i also have a constants folder where i created the base_url. The provider folder contains my provider class, the screens folder contains the app screens and a widget folder of some widgets i abstracted and the.
 
 ## Pull request and Contribution
 Anyone interested in this project can go ahead and fork it, all pull request will be attended to within 24 hours
