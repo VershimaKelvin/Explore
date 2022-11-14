@@ -2,7 +2,7 @@
 
 
 
-## Project Overview
+## Project Overview 😃
 
 This is a country informative app built with flutter, it consumes an API from which data is gotten from, a list of country data with some information like population, capital, language, currency and other is displayed in the Country detail screen. The app supports both light and dark theme, with multiple languages
 
