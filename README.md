@@ -22,7 +22,7 @@ $ flutter run --target lib/main.dart
 ```
 
 ---
-## CodeBase
+## CodeBase 🤖
 
 The projects code base is structured in resemblance to clean architecture but not as detailed. With the initiative to make the app easily extensible, everything basically everything was abstracted and Single responsibility factor was put into mind to achieve this.
 The project has 6 folders under the lib directory /lib, which are core,domain,model,provider,screens and services with each folder containing a file having a particular responsibility.
