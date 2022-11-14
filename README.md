@@ -24,7 +24,7 @@ $ flutter run --target lib/main.dart
 ---
 ## CodeBase 🤖
 
-The projects code base is structured in resemblance to clean architecture but not as detailed. With the initiative to make the app easily extensible, everything basically everything was abstracted and Single responsibility factor was put into mind to achieve this.
+The projects code base is structured in resemblance to clean architecture but not as detailed. With the initiative to make the app easily extensible, everything basically everything was abstracted and Single responsibility was put into mind to achieve this, also used provider sor statemanage management and a little bit of dependency injection.
 The project has 6 folders under the lib directory /lib, which are core,domain,model,provider,screens and services with each folder containing a file having a particular responsibility.
 I have a datasource file in the service folder where i made my network call, i have a network folder in the core folder which has an api_requester file where i instantiated my dio package and configured it with the base_url, the network folder also have a network file where i checked for internet connectivity using the InternetConnectionChecker package.
 Also, it has an error folder still in the core folder where i managed every possible errors, the error folder in turn has an error file and a failure file. In both of these files i handeled errors and failures such as NoInternetFailure, TimoutFailure, NoDataFailure and others.
